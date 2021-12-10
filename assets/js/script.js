@@ -26,7 +26,7 @@ function createRows(numberOfRows){
     //create the rows and fill the array with each row
     for(var i = 0; i < numberOfRows; i++)
     {
-        var row = $("<div>").addClass("row").addClass("row-" + (i));
+        var row = $("<div>").addClass("row").attr("id","row-" + (i));
         
         var currentTime;
         if((i + 9) < 12){
@@ -41,7 +41,7 @@ function createRows(numberOfRows){
 
         var timeCol = $("<p>").addClass("col").addClass("timeCol").text(currentTime);
         var taskCol = $("<p>").addClass("col-8").addClass("taskCol").attr("id","task-" + i);
-        var saveCol = $("<p>").addClass("col").addClass("saveCol").addClass("far").addClass("fa-save");
+        var saveCol = $("<p>").addClass("col").addClass("saveCol").addClass("far").addClass("fa-save").attr("id","save-" + i);
 
         row.append(timeCol);
         row.append(taskCol);
@@ -73,11 +73,21 @@ $("#task-container").on("blur",".taskCol",function(){
     pEl.text(text);
 
     $(this).replaceWith(pEl);
+    
     var taskObj = {
         taskID:id,
         taskText:pEl.text()        
     }
+    if(!tasks){
+        
+    }
     saveTaskObj(taskObj);
+});
+
+$("#task-container").on("click",".saveCol",function(){
+    var saveID = $(this).attr("id").replace("save-","");
+    var taskID = $("#task-" + saveID);
+    console.log(taskID);
 });
 
 //save tasks to local storage
