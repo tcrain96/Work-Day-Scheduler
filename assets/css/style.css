@@ -2,48 +2,65 @@
 :root {
   --background-color: #202138;
   --font-color: #ffffff;
-  --accent-color: #f8e186;
+  --future-color: #f8e186;
+  --present-color: #f8868e;
+  --past-color:#4a4d85;
+  --save-color:#3c8ecd;
 }
-
 body {
   margin: 20px;
   background-color: var(--background-color);
 }
-
 h1 {
   font-size: 50px;
   color: var(--font-color);
   padding-top: 10px;
   font-weight: bold;
 }
-
 h2 {
   font-size: 35px;
-  color: var(--accent-color);
+  color: var(--future-color);
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 3px solid var(--font-color);
 }
-
-p {
-  font-size: 16px;
+p, .row input{
+  font-size: 20px;
+  letter-spacing: 1px;
   color: var(--font-color);
 }
 
-.timeCol {
-  border: 3px solid var(--font-color);
-  border-left: 3px solid transparent;
-  padding: 20px 0px;
+/*Row Styles*/
+.row p, .row input{
+  padding:30px 10px;
+  margin: 15px;
+  background-color: var(--background-color);
 }
-
-.taskCol {
-  border: 3px solid var(--font-color);
-  padding: 20px 10px;
+.row input{
+  width: 100%;
+  resize: none;
+  outline: none;
 }
-
-.saveCol {
-  border: 3px solid var(--font-color);
-  padding: 20px 0px;
+.row .timeCol{
+  border:3px solid var(--font-color);
+  border-left:3px solid transparent;
+  text-align: center;
 }
-
-/*Header Styles*/
+.row .saveCol{
+  border:3px solid var(--save-color);
+  border-right:3px solid transparent;
+  font-size: 30px;
+  color: var(--save-color);
+  text-align: center;
+}
+.row .saveCol:hover, .row .saveCol:focus{
+  background-color: var(--save-color);
+  color:var(--background-color);
+}
+.row .taskCol{
+  border:3px solid var(--future-color);
+}
+.row .taskCol:hover, .row .taskCol:focus{
+  background-color: var(--future-color);
+  color:var(--background-color);
+}
