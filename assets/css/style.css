@@ -2,10 +2,10 @@
 :root {
   --background-color: #202138;
   --font-color: #ffffff;
-  --future-color: #f8e186;
+  --future-color: #50c878;
   --present-color: #f8868e;
-  --past-color:#4a4d85;
-  --save-color:#3c8ecd;
+  --past-color: #4a4d85;
+  --save-color: #3c8ecd;
 }
 body {
   margin: 20px;
@@ -25,43 +25,51 @@ h2 {
   margin-bottom: 20px;
   border-bottom: 3px solid var(--font-color);
 }
-p, .row input{
+p,
+.row input {
   font-size: 20px;
   letter-spacing: 1px;
   color: var(--font-color);
 }
 
 /*Row Styles*/
-.row p, .row input{
-  padding:30px 10px;
+.row p,
+.row input {
+  padding: 30px 10px;
   margin: 15px;
-  background-color: var(--background-color);
 }
-.row input{
+
+.row input {
   width: 100%;
   resize: none;
   outline: none;
 }
-.row .timeCol{
-  border:3px solid var(--font-color);
-  border-left:3px solid transparent;
+
+.row .timeCol {
+  border: 3px solid var(--font-color);
+  border-left: 3px solid transparent;
   text-align: center;
 }
-.row .saveCol{
-  border:3px solid var(--save-color);
-  border-right:3px solid transparent;
+
+.row .saveCol {
+  border: 3px solid var(--save-color);
+  border-right: 3px solid transparent;
   font-size: 30px;
   color: var(--save-color);
   text-align: center;
 }
-.row .saveCol:hover, .row .saveCol:focus{
+.row .saveCol:hover,
+.row .saveCol:focus {
   background-color: var(--save-color);
-  color:var(--background-color);
+  color: var(--background-color);
 }
-.row .taskCol{
-  border:3px solid var(--future-color);
-}
-.row .taskCol:hover, .row .taskCol:focus{
+
+.row .taskCol {
   background-color: var(--future-color);
-  color:var(--background-color);
+  border: 3px solid transparent;
+}
+
+.row .taskCol:hover,
+.row .taskCol:focus {
+  border: 3px solid var(--font-color);
 }
