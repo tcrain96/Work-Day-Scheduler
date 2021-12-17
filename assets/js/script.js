@@ -122,7 +122,7 @@ $("#task-container").on("click",".saveCol",function(){
     }
     
     //if the array of tasks is empty, just push the task in
-    if(tasks.length === 0){
+    if(tasks.length === 0 || tasks.length === null || tasks.length === undefined){
         tasks.push(taskObj);
     }
 
