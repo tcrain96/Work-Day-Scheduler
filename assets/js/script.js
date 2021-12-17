@@ -122,8 +122,9 @@ $("#task-container").on("click",".saveCol",function(){
     }
     
     //if the array of tasks is empty, just push the task in
-    if(tasks.length === 0 || tasks.length === null || tasks.length === undefined){
-        tasks.push(taskObj);
+    console.log(tasks);
+    if(tasks === null){
+        tasks = [taskObj];
     }
 
     //if the task is found anywhere in the array, replace that task instead of pushing in a new one
