@@ -1,7 +1,3 @@
-[Work Day Scheduler Live URL](https://tcrain96.github.io/Work-Day-Scheduler/)
-
-![Work Day Scheduler Home Page](./assets/img/Full-Screenshot.png?raw=true "Home - Word Day Scheduler")
-
 # Work Day Scheduler
 
 [Work Day Scheduler Live URL](https://tcrain96.github.io/Work-Day-Scheduler/)
